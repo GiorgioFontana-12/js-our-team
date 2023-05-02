@@ -14,6 +14,8 @@ for (const key in team) {
     if (Object.hasOwnProperty.call(team, key)) {
         const teamComponent = team[key];
         console.log(teamComponent)
-        teamList.innerHTML += (teamComponent)
+        teamList.innerHTML += teamComponent.name
+        teamList.innerHTML += teamComponent.work
+        teamList.innerHTML += `<img src="./img/${teamComponent.img}" alt="">` 
     }
 }
