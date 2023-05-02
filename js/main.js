@@ -1,3 +1,4 @@
+let teamList = document.getElementById("teamList")
 const team = [
     {name: "Wayne Barnett", work: "Founder & CEO",      	img: "wayne-barnett-founder-ceo.jpg"        },
     {name: "Angela Caroll", work: "Chief Editor",	        img: "angela-caroll-chief-editor.jpg"       },
@@ -13,5 +14,6 @@ for (const key in team) {
     if (Object.hasOwnProperty.call(team, key)) {
         const teamComponent = team[key];
         console.log(teamComponent)
+        teamList.innerHTML += (teamComponent)
     }
 }
