@@ -13,11 +13,10 @@ console.log(team)
 for (const key in team) {
     if (Object.hasOwnProperty.call(team, key)) {
         const teamComponent = team[key];
-        console.log(teamComponent)
-        const nuovoDiv = document.createElement("div");
-        nuovoDiv.classList.add("card");
-        nuovoDiv.innerHTML += teamComponent.name
-        nuovoDiv.innerHTML += teamComponent.work
-        nuovoDiv.innerHTML += `<img src="./img/${teamComponent.img}" alt="">` 
+        console.log(teamComponent);
+        let componentName = teamComponent.name
+        let componentWork = teamComponent.work
+        let componentImg =  teamComponent.img 
+        teamList.innerHTML += `<div class="card"> <img src="./img/${componentImg}" alt="img"> <p> ${componentName}</p> <p>${componentWork}</p>  </div>`
     }
 }
